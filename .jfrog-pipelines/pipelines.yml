@@ -1,0 +1,11 @@
+pipelines:
+  - name: run_num_pipeline
+    steps:
+      - name: step_1
+        type: Bash
+        configuration:
+        execution:
+          onExecute:
+            - echo "test"
+            - update_run_description "some_text"
+            - set_run_name "some_text"
